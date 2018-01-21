@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="ko">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java"%>
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
-    <link rel="icon" href="logo.ico">
+    <link rel="icon" href="resources/logo.ico">
 
     <title>SMU ASSET</title>
 
     <!-- 부트스트랩 -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--<link href="jumbotron.css" rel="stylesheet">-->
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
     <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
@@ -39,8 +40,7 @@
       .navbar-collapse.collapse{
         width: 1200px;
       }
-
-    </style>
+	</style>
   </head>
   <body>
 
@@ -56,7 +56,7 @@
           <a class="navbar-brand" href="#">SMU ASSET</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" action="/smu/signup">
+          <form class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
             </div>
@@ -64,7 +64,7 @@
               <input type="password" placeholder="Password" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">로그인</button>
-            <button type="submit" class="btn btn-success">회원가입</button>
+            <input type="button" value = "회원가입" class="btn btn-success" onclick="location.href='/smu/signup' "></button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -131,6 +131,6 @@
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
