@@ -15,6 +15,16 @@
 	background-color: #32BEBE;
 	height: 150px;
 	margin-top: 50px;
+} 
+
+<!--상단 영역 -->
+.navbar-collapse.collapse{
+        width: 1200px;
+      }
+
+.navbar-brand {
+	font-size: 25px;
+	color: blue;
 }
 
 .form-group {
@@ -36,7 +46,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">SMU ASSET</a>
+			<a class="navbar-brand" href="/smu/main">SMU ASSET</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<form class="navbar-form navbar-right">
@@ -55,16 +65,31 @@
 		<!--/.navbar-collapse -->
 	</div>
 	</nav>
+	<div id="navbar" class="navbar-collapse collapse">
+		<form class="navbar-form navbar-right">
+			<div class="form-group">
+				<input type="text" placeholder="Email" class="form-control">
+			</div>
+			<div class="form-group">
+				<input type="password" placeholder="Password" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-success">로그인</button>
+			<input type="button" value="회원가입" class="btn btn-success"
+				onclick="location.href='/smu/signup' ">
+			</button>
+		</form>
+	</div>
+	<!--/.navbar-collapse -->
+	</div>
+	</nav>
 	<div class="jumbotron">
-		<div class="container" id="upperContainer" style="text-align: center; padding-top : 5px;">
-			<br />
-			<br />
+		<div class="container" id="upperContainer"
+			style="text-align: center; padding-top: 5px;">
+			<br /> <br />
 			<h1>
 				<b>회원가입</b>
 			</h1>
-			<br />
-			
-			<br />
+			<br /> <br />
 			<!--<p><a class="btn btn-primary btn-lg" href="#" role="button">자세히 보기 &raquo;</a></p>-->
 		</div>
 	</div>

@@ -39,4 +39,29 @@ public class HomeController {
 	public String signUp() {
 		return "signup";
 	}
+	@RequestMapping(value = "/gconsult", method = RequestMethod.GET)
+	public String showGConsult() {
+		return "gconsult";
+	}
+	
+	@RequestMapping(value = "/pconsult", method = RequestMethod.GET)
+	public String showPConsult() {
+		return "pconsult";
+	}
+	@RequestMapping(value = "/news", method = RequestMethod.GET)
+	public String showNews() {
+		return "news";
+	}
+	@RequestMapping(value = "/policy", method = RequestMethod.GET)
+	public String showPolicy() {
+		return "policy";
+	}
+	@RequestMapping(value = "/community", method = RequestMethod.GET)
+	public String showCommunity() {
+		return "community";
+	}
+	@RequestMapping(value = "/stat", method = RequestMethod.GET)
+	public String showStat() {
+		return "stat";
+	}
 }

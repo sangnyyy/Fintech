@@ -53,7 +53,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">SMU ASSET</a>
+          <a class="navbar-brand" href="/smu/main">SMU ASSET</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
@@ -88,18 +88,18 @@
           <p>빅데이터 분석을 이용하여 고객님의 투자 성향을 파악하여 그에 맞게
           세그먼트화 되어진 그룹을 배정하고 그룹에 맞는 최고수준의 투자자를 배치하여
           투자대비 최적의 실적을 낼 수 있도록 컨설팅을 진행합니다. </p>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
+          <p><a class="btn btn-default" href="/smu/gconsult" role="button">자세히 보기 &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>개인 컨설팅</h2>
           <p>빅데이터 분석을 이용하여 고객님의 투자 성향을 파악하여 개인적으로 
           컨설팅을 제공 받을 수 있도록 최고수준의 투자자를 매칭 시킵니다. </p>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
+          <p><a class="btn btn-default" href="/smu/pconsult" role="button">자세히 보기 &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>금융뉴스</h2>
           <p>최신 금융뉴스를 제공하고 이에 대한 전문가들의 견해를 제공합니다. </p>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
+          <p><a class="btn btn-default" href="/smu/news" role="button">자세히 보기 &raquo;</a></p>
         </div>
       </div>
       <div class="row">
@@ -108,18 +108,18 @@
           <p>빅데이터 분석을 이용하여 고객님의 투자 성향을 파악하여 그에 맞게
           세그먼트화 되어진 그룹을 배정하고 그룹에 맞는 최고수준의 투자자를 배치하여
           투자대비 최적의 실적을 낼 수 있도록 컨설팅을 진행합니다. </p>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
+          <p><a class="btn btn-default" href="/smu/policy" role="button">자세히 보기 &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>커뮤니티</h2>
           <p>빅데이터 분석을 이용하여 고객님의 투자 성향을 파악하여 개인적으로 
           컨설팅을 제공 받을 수 있도록 최고수준의 투자자를 매칭 시킵니다. </p>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
+          <p><a class="btn btn-default" href="/smu/community" role="button">자세히 보기 &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>통계 자료실</h2>
           <p>최신 금융뉴스를 제공하고 이에 대한 전문가들의 견해를 제공합니다. </p>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
+          <p><a class="btn btn-default" href="/smu/stat" role="button">자세히 보기 &raquo;</a></p>
         </div>
       </div>
       <hr>
