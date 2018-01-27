@@ -8,7 +8,7 @@
 
 ## 참고자료
 * [카카오 오븐을 이용하여 제작한 앱 UI](https://ovenapp.io/view/6gPK3P0EtbQ76SQzkD9Fx42P6OvmmiIf/)
-
+* [네이버 금융 뉴스](http://news.naver.com/main/list.nhn?mode=LS2D&mid=shm&sid1=101&sid2=259)
 ---
 ## 개발 환경 및 개발 툴
 * ECLIPSE
