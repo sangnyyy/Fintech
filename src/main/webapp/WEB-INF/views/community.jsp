@@ -15,12 +15,12 @@
 	background-color: #32BEBE;
 	height: 150px;
 	margin-top: 50px;
-} 
+}
 
-<!--상단 영역 -->
-.navbar-collapse.collapse{
-        width: 1200px;
-      }
+<!--
+상단 영역 -->.navbar-collapse.collapse {
+	width: 1200px;
+}
 
 .navbar-brand {
 	font-size: 25px;
@@ -93,7 +93,83 @@
 			<!--<p><a class="btn btn-primary btn-lg" href="#" role="button">자세히 보기 &raquo;</a></p>-->
 		</div>
 	</div>
-	
+	<div class="container">
+	<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>날짜</th>
+						<th>조회수</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>안녕</td>
+						<td>sml</td>
+						<td>18.02.01</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>안녕</td>
+						<td>sml</td>
+						<td>18.02.01</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>안녕</td>
+						<td>sml</td>
+						<td>18.02.01</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>안녕</td>
+						<td>sml</td>
+						<td>18.02.01</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>안녕</td>
+						<td>sml</td>
+						<td>18.02.01</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>안녕</td>
+						<td>sml</td>
+						<td>18.02.01</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>안녕</td>
+						<td>sml</td>
+						<td>18.02.01</td>
+						<td>1</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			<hr/>
+			<a class="btn btn-default">글쓰기</a>
+			<div class="text-center">
+				<ul class="pagination">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				
+				</ul>
+			</div>
+			</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
