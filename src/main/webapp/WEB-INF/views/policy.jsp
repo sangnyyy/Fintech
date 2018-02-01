@@ -93,7 +93,38 @@
 			<!--<p><a class="btn btn-primary btn-lg" href="#" role="button">자세히 보기 &raquo;</a></p>-->
 		</div>
 	</div>
-	
+	<div class="container">
+      <!-- Example row of columns -->
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>지역별 행정 정보</h2>
+          <p>지역별 행정 정보에 대하여 자세히 알아보세요.
+          </p><br/>
+          <img src="http://www.isisa.net/news/photo/201305/24215_20928_4715.jpg" style="width:360px; height:180px;">
+          <br/>
+          <p><a class="btn btn-default" href="http://www.mois.go.kr/frt/a01/frtMain.do" role="button">자세히 보기 &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>지역별 부동산 가격
+          </h2>
+		  <p>지역별 부동 가격에 대하여 자세히 알아보세요.</p><br/>
+		  <img src="http://www.joseilbo.com/gisa_img_origin/160328050353_soosup_origin.jpg"
+           style="width:360px; height:180px;">
+          <br/>
+          <p><a class="btn btn-default" href="http://land.naver.com/" role="button">자세히 보기 &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>기타 금융 관련 소식
+          </h2>
+          <p>기타 금융 관련 소식에 대하여 자세히 알아보세요.</p><br/>
+          
+		  <img src="http://img.etnews.com/photonews/1604/797015_20160428152038_293_0001.jpg"
+           style="width:360px; height:180px;">
+
+          <p><a class="btn btn-default" href="http://finance.naver.com/" role="button">자세히 보기 &raquo;</a></p>
+        </div>
+      </div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->

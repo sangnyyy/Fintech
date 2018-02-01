@@ -15,12 +15,12 @@
 	background-color: #32BEBE;
 	height: 150px;
 	margin-top: 50px;
-} 
+}
 
-<!--상단 영역 -->
-.navbar-collapse.collapse{
-        width: 1200px;
-      }
+<!--
+상단 영역 -->.navbar-collapse.collapse {
+	width: 1200px;
+}
 
 .navbar-brand {
 	font-size: 25px;
@@ -94,38 +94,50 @@
 		</div>
 	</div>
 	<div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>사상 최고치 경신한 코스피…어디까지 갈까</h2>
-          <p>28일 한국거래소에 따르면 외국인은 올해 들어 26일 기준 2조4200억원의 순매수(누적)를 기록했다. 최근 정부가 외국인 대주주의 양도소득세 정책을 강화하기로 하면서 외국인 자금이 이탈할 것이란 우려가 나왔지만 최근의 매수세는 이 같은 우려를 불식시키고 있다. 
-          </p>
-          <img src="http://imgnews.naver.net/image/016/2018/01/28/20180127000202_0_20180128081905471.jpg?type=w647" style="width:360px; height:180px;">
-          <br/>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>달러, 트럼프 발언에 상승
-          </h2>
-		  <p>1월 13일 달러/원 환율은 11.6원 하락한 1,058.6원 마감. 달러/원 환율은 전일 미국 재무장관의 달러 약세 선호 발언에 따라 하락 마감. 달러지수가 90을 하회하면서 약세폭을 확대하자 달러/원 환율도 1,060원을 하회. 1,050원 선에서 외환당국의 속도조절 추정 매물로 하락이 제한되기도 했지만, 외국인의 주식 순매수와 함께 결국 연중 최저 수준으로 마감.
-		  </p>
-		  <img src="http://ppss.kr/wp-content/uploads/2016/04/%ED%8A%B8%EB%9F%BC%ED%94%8401.jpg"
-           style="width:360px; height:180px;">
-          <br/>
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>금감원, 지난해 재무상담 1만5975건…빚 상담이 절반
-          </h2>
-          <p>금융감독원은 지난해 금융 소비자를 대상으로 한 무료 재무상담인 '금융자문서비스'를 총 1만5975건, 일 평균 54건꼴로 실시했다고 28일 밝혔다. 
-          </p>
-          <br/>
-		  <img src="http://murutukus.kr/wp/wp-content/uploads/2017/05/5%E1%84%86%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%80%E1%85%AF%E1%86%AB.jpg"
-           style="width:360px; height:180px;">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-md-4">
+				<h2>사상 최고치 경신한 코스피…어디까지 갈까</h2>
+				<p>28일 한국거래소에 따르면 외국인은 올해 들어 26일 기준 2조4200억원의 순매수(누적)를 기록했다. 최근
+					정부가 외국인 대주주의 양도소득세 정책을 강화하기로 하면서 외국인 자금이 이탈할 것이란 우려가 나왔지만 최근의 매수세는
+					이 같은 우려를 불식시키고 있다.</p>
+				<img
+					src="http://imgnews.naver.net/image/016/2018/01/28/20180127000202_0_20180128081905471.jpg?type=w647"
+					style="width: 360px; height: 180px;"> <br />
+				<p>
+					<a class="btn btn-default" href="#" role="button">자세히 보기
+						&raquo;</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>달러, 트럼프 발언에 상승</h2>
+				<p>1월 13일 달러/원 환율은 11.6원 하락한 1,058.6원 마감. 달러/원 환율은 전일 미국 재무장관의
+					달러 약세 선호 발언에 따라 하락 마감. 달러지수가 90을 하회하면서 약세폭을 확대하자 달러/원 환율도 1,060원을
+					하회. 1,050원 선에서 외환당국의 속도조절 추정 매물로 하락이 제한되기도 했지만, 외국인의 주식 순매수와 함께 결국
+					연중 최저 수준으로 마감.</p>
+				<img
+					src="http://ppss.kr/wp-content/uploads/2016/04/%ED%8A%B8%EB%9F%BC%ED%94%8401.jpg"
+					style="width: 360px; height: 180px;"> <br />
+				<p>
+					<a class="btn btn-default" href="#" role="button">자세히 보기
+						&raquo;</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>금감원, 지난해 재무상담 1만5975건…빚 상담이 절반</h2>
+				<p>금융감독원은 지난해 금융 소비자를 대상으로 한 무료 재무상담인 '금융자문서비스'를 총 1만5975건, 일 평균
+					54건꼴로 실시했다고 28일 밝혔다.</p>
+				<br /> <img
+					src="http://murutukus.kr/wp/wp-content/uploads/2017/05/5%E1%84%86%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%80%E1%85%AF%E1%86%AB.jpg"
+					style="width: 360px; height: 180px;">
 
-          <p><a class="btn btn-default" href="#" role="button">자세히 보기 &raquo;</a></p>
-        </div>
-      </div>
+				<p>
+					<a class="btn btn-default" href="#" role="button">자세히 보기
+						&raquo;</a>
+				</p>
+			</div>
+		</div>
+	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->

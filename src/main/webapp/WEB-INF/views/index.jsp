@@ -116,11 +116,7 @@
           컨설팅을 제공 받을 수 있도록 최고수준의 투자자를 매칭 시킵니다. </p>
           <p><a class="btn btn-default" href="/smu/community" role="button">자세히 보기 &raquo;</a></p>
        </div>
-        <div class="col-md-4">
-          <h2>통계 자료실</h2>
-          <p>최신 금융뉴스를 제공하고 이에 대한 전문가들의 견해를 제공합니다. </p>
-          <p><a class="btn btn-default" href="/smu/stat" role="button">자세히 보기 &raquo;</a></p>
-        </div>
+        
       </div>
       <hr>
 
