@@ -56,12 +56,12 @@
           <a class="navbar-brand" href="/smu/main">SMU ASSET</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
+          <form class="navbar-form navbar-right" action="/smu/login" method="POST">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input type="text" placeholder="Email" class="form-control" name="email">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" placeholder="Password" class="form-control" name="password">
             </div>
             <button type="submit" class="btn btn-success">로그인</button>
             <input type="button" value = "회원가입" class="btn btn-success" onclick="location.href='/smu/signup' "></button>
@@ -105,15 +105,12 @@
       <div class="row">
         <div class="col-md-4">
           <h2>정책 모아보기</h2>
-          <p>빅데이터 분석을 이용하여 고객님의 투자 성향을 파악하여 그에 맞게
-          세그먼트화 되어진 그룹을 배정하고 그룹에 맞는 최고수준의 투자자를 배치하여
-          투자대비 최적의 실적을 낼 수 있도록 컨설팅을 진행합니다. </p>
+          <p> 각종 언론사 및 뉴스의 정보에 입각하여 최신 정책과 관심이 뜨거운 이슈에 대하여 제시하고 이에 대한 전문가들의 견해를 함께 제시합니다. </p>
           <p><a class="btn btn-default" href="/smu/policy" role="button">자세히 보기 &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>커뮤니티</h2>
-          <p>빅데이터 분석을 이용하여 고객님의 투자 성향을 파악하여 개인적으로 
-          컨설팅을 제공 받을 수 있도록 최고수준의 투자자를 매칭 시킵니다. </p>
+          <p>커뮤니티를 제공합니다. </p>
           <p><a class="btn btn-default" href="/smu/community" role="button">자세히 보기 &raquo;</a></p>
        </div>
         
