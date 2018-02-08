@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE>
 <html>
 <head>
 <meta charset="utf-8">
@@ -15,12 +18,12 @@
 	background-color: #32BEBE;
 	height: 150px;
 	margin-top: 50px;
-} 
+}
 
-<!--상단 영역 -->
-.navbar-collapse.collapse{
-        width: 1200px;
-      }
+<!--
+상단 영역 -->.navbar-collapse.collapse {
+	width: 1200px;
+}
 
 .navbar-brand {
 	font-size: 25px;
@@ -93,44 +96,33 @@
 			<!--<p><a class="btn btn-primary btn-lg" href="#" role="button">자세히 보기 &raquo;</a></p>-->
 		</div>
 	</div>
-	<form style="margin: 0 auto; width: 250px; margin-top: 30px">
+ 	<spring:hasBindErrors name="memberRegReq" />
+	<form method="POST"
+		style="margin: 0 auto; width: 250px; margin-top: 30px">
 		<div class="form-group">
 			<label for="userName">이름</label> <input type="text"
 				class="form-control" id="userName" aria-describedby="nameHelp"
-				placeholder="Enter name" style="width: 250px">
+				placeholder="Enter name" style="width: 250px" name="name" value = "${memberRegReq.name}">
 		</div>
-		<br />
-
 		<div class="form-group">
 			<label for="exampleInputEmail1">이메일</label> <input type="email"
 				class="form-control" id="exampleInputEmail1"
 				aria-describedby="emailHelp" placeholder="Enter email"
-				style="width: 250px">
-		</div>
-		<br />
+				style="width: 250px" name="email" value="${memberRegReq.email }">
 
+		</div>
 		<div class="form-group">
 			<label for="exampleInputPassword1">비밀번호</label> <input
 				type="password" class="form-control" id="exampleInputPassword1"
-				placeholder="Password" style="width: 250px"> <small
-				id="passwordHelp" class="form-text text-muted"
+				placeholder="Password" style="width: 250px" name="password" value="${memberRegReq.password }">
+			<small id="passwordHelp" class="form-text text-muted"
 				style="font-size: 8px">길이는 6자 이상이어야 합니다.</small>
 		</div>
-		<br />
-
 		<div class="form-group">
 			<label for="exampleInputPassword2">비밀번호 재확인</label> <input
 				type="password" class="form-control" id="exampleInputPassword1"
 				placeholder="Password" style="width: 250px">
 		</div>
-		<br />
-
-		<!-- <div class="form-check">
-			<input type="checkbox" class="form-check-input" id="exampleCheck1">
-			<label class="form-check-label" for="exampleCheck1">Check me
-				out</label>
-		</div> -->
-
 		<button type="submit" class="btn btn-primary">가입하기</button>
 	</form>
 	<script
