@@ -1,5 +1,7 @@
 package kr.ac.smu;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.util.Date;
@@ -7,6 +9,8 @@ import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,23 +44,29 @@ public class HomeController implements BeanFactoryAware{
 	public String home(Locale locale, Model model) {
 		return "index";
 	}
-//	@RequestMapping(value ="/login", method = RequestMethod.POST)
-//	public String login(HttpServletRequest req) {
-//		MemberRegistRequest mem = new MemberRegistRequest();
-//		try {
-//			req.setCharacterEncoding("UTF-8");	//POST방식 encoding 해결
-//			mem = registDao.select(req.getParameter("email"), req.getParameter("password")).get(0);
-//			System.out.println("email :" +mem.getEmail() +" password : " +mem.getPassword());
-//			if(mem.getEmail() != null && mem.getPassword() != null) return "redirect:/main";
-//			else {
-//				return "redirect:/signup";
-//			}
-//		} catch (UnsupportedEncodingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//			return "redirect:/signup";
-//		}
-//	}
+	@RequestMapping(value ="/login", method = RequestMethod.POST)
+	public void login(HttpServletResponse res, HttpServletRequest req, HttpSession session) throws IOException {
+		try {
+			res.setContentType("text/html; charset=UTF-8");
+			req.setCharacterEncoding("UTF-8");	//POST방식 encoding 해결
+			PrintWriter out = res.getWriter();
+			if(registDao.loginCheck(req.getParameter("email"), req.getParameter("password"))) {
+				session.setAttribute("login", 0);
+				out.println("<script>alert('로그인을 성공하였습니다!'); location.href='/smu/main'</script>");
+				out.flush();
+				out.close();
+			}
+			else {
+				out.println("<script>alert('로그인 정보를 확인하세요!'); location.href='/smu/signup'</script>");
+				out.flush();
+				out.close();
+			}
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signUp() {
 		return "signup";
@@ -81,16 +91,7 @@ public class HomeController implements BeanFactoryAware{
 		}
 		
 	}
-//	@RequestMapping(value="/show")
-//	public String show(HttpServletRequest req, Model model) {
-//		
-//		int start = 0;
-//		int size = registDao.count();
-//		List<MemberRegistRequest> mems = registDao.select(start, size);
-//		model.addAttribute("mems", mems);
-//		return "show";
-//		
-//	}
+
 	@RequestMapping(value = "/gconsult", method = RequestMethod.GET)
 	public String showGConsult() {
 		return "gconsult";
