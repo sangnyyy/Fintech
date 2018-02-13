@@ -27,7 +27,7 @@
 	<beans:bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<beans:property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<beans:property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mem_Info" />
+		<beans:property name="jdbcUrl" value="jdbc:mysql://smldb.czxi1b10dlvz.ap-northeast-2.rds.amazonaws.com:3306/mem_Info" />
 		<beans:property name="user" value="root" />
 		<beans:property name="password" value="password" />
 	</beans:bean>

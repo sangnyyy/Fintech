@@ -49,20 +49,17 @@ public class JdbcRegistDao implements RegistDao {
 	@Override
 	public int count() {
 		int result = jdbc.queryForInt("select count(*) from members");
-		return 0;
+		return result;
 	}
 
 	@Override
-	public List<MemberRegistRequest> select(String email, String password) {
+	public List<MemberRegistRequest> select() {
 		List<MemberRegistRequest> result = jdbc.query(
-				"select * from members order by id desc where email=? and password=?",
-				new Object[] {email, password},
+				"select * from members order by id",
 				new RowMapper<MemberRegistRequest>() {
-
 					@Override
 					public MemberRegistRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
 						MemberRegistRequest mem = new MemberRegistRequest();
-						mem.setName(rs.getString("name"));
 						mem.setEmail(rs.getString("email"));
 						mem.setPassword(rs.getString("password"));
 						return mem;
@@ -71,6 +68,22 @@ public class JdbcRegistDao implements RegistDao {
 				}			
 				);
 		return result;
+	}
+
+	@Override
+	public boolean loginCheck(String email, String password) {
+		
+		int result = 0;
+		result = jdbc.queryForInt(
+				"select count(email) from members where email=? and password=?",
+				new Object[] {email, password}			
+				);
+		if(result > 0) { 
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 }
