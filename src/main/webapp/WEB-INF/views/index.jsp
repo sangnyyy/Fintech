@@ -58,23 +58,36 @@
 				</button>
 				<a class="navbar-brand" href="/smu/main">SMU ASSET</a>
 			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" action="/smu/login"
-					method="POST">
-					<div class="form-group">
-						<input type="text" placeholder="Email" class="form-control"
-							name="email">
+
+			<c:choose>
+				<c:when test="${sessionScope.name ne null }">
+				<div id="navbar" class="navbar-collapse collapse">
+					<form class="navbar-form navbar-right" style="height:30px;" action="/smu/logout">
+						<span class="navbar-brand" style="padding-top:7px;">${sessionScope.name }님 환영합니다.</span>
+							<button type="submit" class="btn btn-success">로그아웃</button>
+					</form>					
+				</div>
+				</c:when>
+				<c:otherwise>
+					<div id="navbar" class="navbar-collapse collapse">
+						<form class="navbar-form navbar-right" action="/smu/login"
+							method="POST">
+							<div class="form-group">
+								<input type="text" placeholder="Email" class="form-control"
+									name="email">
+							</div>
+							<div class="form-group">
+								<input type="password" placeholder="Password"
+									class="form-control" name="password">
+							</div>
+							<button type="submit" class="btn btn-success">로그인</button>
+							<input type="button" value="회원가입" class="btn btn-success"
+								onclick="location.href='/smu/signup' ">
+							</button>
+						</form>
 					</div>
-					<div class="form-group">
-						<input type="password" placeholder="Password" class="form-control"
-							name="password">
-					</div>
-					<button type="submit" class="btn btn-success">로그인</button>
-					<input type="button" value="회원가입" class="btn btn-success"
-						onclick="location.href='/smu/signup' ">
-					</button>
-				</form>
-			</div>
+				</c:otherwise>
+			</c:choose>
 			<!--/.navbar-collapse -->
 		</div>
 

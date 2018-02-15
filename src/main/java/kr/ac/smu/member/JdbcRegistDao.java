@@ -53,13 +53,15 @@ public class JdbcRegistDao implements RegistDao {
 	}
 
 	@Override
-	public List<MemberRegistRequest> select() {
+	public List<MemberRegistRequest> select(String email) {
 		List<MemberRegistRequest> result = jdbc.query(
-				"select * from members order by id",
+				"select * from members where email=?",
+				new Object[] {email},
 				new RowMapper<MemberRegistRequest>() {
 					@Override
 					public MemberRegistRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
 						MemberRegistRequest mem = new MemberRegistRequest();
+						mem.setName(rs.getString("name"));
 						mem.setEmail(rs.getString("email"));
 						mem.setPassword(rs.getString("password"));
 						return mem;
