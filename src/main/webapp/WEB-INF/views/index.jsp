@@ -12,14 +12,7 @@
 
 <!-- 부트스트랩 -->
 <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="jumbotron.css" rel="stylesheet">-->
-<!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
-<!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<!--#navbar-->
+
 <style>
 .navbar-brand {
 	font-size: 25px;
@@ -101,11 +94,11 @@
 				<b>Welcome!</b>
 			</h1>
 			<br />
-			<p>
+			<h3>
 				저희 <b>SMU ASSET</b>은 소규모 자본을 모아 대규모 자본을 만들어 투자영역에 대한 확장성을 제공합니다.<br />
 				또한 여러분의 투자성향을 파악하여 자본투자에 대한 성공적인 방향성 제시를 해주는 플랫폼입니다.<br /> 지금 바로 <b>SMU
 					ASSET</b>과 함께 성공적인 투자를 시작하세요!
-			</p>
+			</h3>
 			<br />
 			<!--<p><a class="btn btn-primary btn-lg" href="#" role="button">자세히 보기 &raquo;</a></p>-->
 		</div>
@@ -164,7 +157,7 @@
 		<hr>
 
 		<footer>
-			<p>&copy; Company 2014</p>
+			<p>&copy; 상민이 사이트 All Rights Reserved.</p>
 		</footer>
 	</div>
 	<!-- /container -->
