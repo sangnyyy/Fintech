@@ -22,6 +22,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import kr.ac.smu.member.JdbcRegistDao;
 import kr.ac.smu.member.MemberRegistRequest;
@@ -34,6 +35,7 @@ import kr.ac.smu.member.RegistDao;
 public class HomeController implements BeanFactoryAware{
 	private RegistDao registDao;
 	
+	
 	@Override
 	public void setBeanFactory(BeanFactory context) throws BeansException {
 		// TODO Auto-generated method stub
@@ -44,6 +46,7 @@ public class HomeController implements BeanFactoryAware{
 	public String home(Locale locale, Model model) {
 		return "index";
 	}
+	
 	@RequestMapping(value ="/login", method = RequestMethod.POST)
 	public void login(HttpServletResponse res, HttpServletRequest req, HttpSession session) throws IOException {
 		try {
@@ -51,7 +54,9 @@ public class HomeController implements BeanFactoryAware{
 			req.setCharacterEncoding("UTF-8");	//POST방식 encoding 해결
 			PrintWriter out = res.getWriter();
 			if(registDao.loginCheck(req.getParameter("email"), req.getParameter("password"))) {
-				session.setAttribute("login", 0);
+				List<MemberRegistRequest> list = registDao.select(req.getParameter("email"));
+				System.out.println(list.get(0).getName());
+				session.setAttribute("name", list.get(0).getName());
 				out.println("<script>alert('로그인을 성공하였습니다!'); location.href='/smu/main'</script>");
 				out.flush();
 				out.close();
@@ -65,6 +70,17 @@ public class HomeController implements BeanFactoryAware{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	@RequestMapping(value="/logout")
+	public void logOut(HttpServletResponse res, HttpSession session) throws IOException {
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
+		session.removeAttribute("name");
+		out.println("<script>alert('로그아웃을 성공하였습니다!'); location.href='/smu/main'</script>");
+		out.flush();
+		out.close();
+		
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
