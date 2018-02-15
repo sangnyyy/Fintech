@@ -62,7 +62,7 @@ public class HomeController implements BeanFactoryAware{
 				out.close();
 			}
 			else {
-				out.println("<script>alert('로그인 정보를 확인하세요!'); location.href='/smu/signup'</script>");
+				out.println("<script>alert('로그인 정보를 확인하세요!'); location.href='/smu/main'</script>");
 				out.flush();
 				out.close();
 			}
@@ -88,22 +88,24 @@ public class HomeController implements BeanFactoryAware{
 		return "signup";
 	}
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String signUpFinish(HttpServletRequest req){
+	public void signUpFinish(HttpServletRequest req, HttpServletResponse res) throws IOException{
 		MemberRegistRequest mem = new MemberRegistRequest();
 		try {
 			req.setCharacterEncoding("UTF-8");	//POST방식 encoding 해결
-			System.out.println(req.getParameter("name"));
+			res.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = res.getWriter();
 			mem.setName(req.getParameter("name"));
 			mem.setEmail(req.getParameter("email"));
 			mem.setPassword(req.getParameter("password"));
 			
 			registDao.insert(mem);
+			out.println("<script>alert('회원가입을 성공하였습니다!'); location.href='/smu/main'</script>");
+			out.flush();
+			out.close();
 			
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
-			return "redirect:/main";
 		}
 		
 	}
@@ -133,20 +135,6 @@ public class HomeController implements BeanFactoryAware{
 	public String showStat() {
 		return "stat";
 	}
-	
-//	private void databaseTest() {
-//		System.out.println("database testing");
-//		MemberRegistRequest msg = new MemberRegistRequest();
-//		msg.setName("han");
-//		msg.setEmail("dltkdals21010@naver.com");
-//		msg.setPassword("asdfghj");
-//		registDao.insert(msg);
-//		
-//		System.out.println("select test");
-//		List<MemberRegistRequest> msgs = registDao.select(0, 2);
-//		MemberRegistRequest msg1 = msgs.get(0);
-//		System.out.println(msg1.getName());
-//		
-//	}
+
 	
 }

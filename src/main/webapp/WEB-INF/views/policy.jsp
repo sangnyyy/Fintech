@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -52,7 +53,7 @@
 			<c:choose>
 				<c:when test="${sessionScope.name ne null }">
 				<div id="navbar" class="navbar-collapse collapse">
-					<form class="navbar-form navbar-right" style="height:30px;">
+					<form class="navbar-form navbar-right" style="height:30px;" action="/smu/logout">
 						<span class="navbar-brand" style="padding-top:7px;">${sessionScope.name }님 환영합니다.</span>
 							<button type="submit" class="btn btn-success">로그아웃</button>
 					</form>					
@@ -142,6 +143,7 @@
           <p><a class="btn btn-default" href="http://finance.naver.com/" role="button">자세히 보기 &raquo;</a></p>
         </div>
       </div>
+      
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
