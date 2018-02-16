@@ -55,7 +55,6 @@ public class HomeController implements BeanFactoryAware{
 			PrintWriter out = res.getWriter();
 			if(registDao.loginCheck(req.getParameter("email"), req.getParameter("password"))) {
 				List<MemberRegistRequest> list = registDao.select(req.getParameter("email"));
-				System.out.println(list.get(0).getName());
 				session.setAttribute("name", list.get(0).getName());
 				out.println("<script>alert('로그인을 성공하였습니다!'); location.href='/smu/main'</script>");
 				out.flush();
@@ -72,6 +71,22 @@ public class HomeController implements BeanFactoryAware{
 		}
 	}
 	
+	@RequestMapping(value="cwrite", method = RequestMethod.GET)
+	public String communityWrite() {
+		return "cwrite";
+	}
+	@RequestMapping(value="cwrite", method = RequestMethod.POST)
+	public String communityWriteFinish() {
+		return "index";
+	}
+	@RequestMapping(value="pwrite", method = RequestMethod.GET)
+	public String pConsultWrite() {
+		return "pwrite";
+	}
+	@RequestMapping(value="pwrite", method = RequestMethod.POST)
+	public String pConsultWriteFinish() {
+		return "index";
+	}
 	@RequestMapping(value="/logout")
 	public void logOut(HttpServletResponse res, HttpSession session) throws IOException {
 		res.setContentType("text/html; charset=UTF-8");
@@ -131,10 +146,4 @@ public class HomeController implements BeanFactoryAware{
 	public String showCommunity() {
 		return "community";
 	}
-	@RequestMapping(value = "/stat", method = RequestMethod.GET)
-	public String showStat() {
-		return "stat";
-	}
-
-	
 }

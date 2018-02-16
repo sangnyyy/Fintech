@@ -43,5 +43,10 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/＊</url-pattern>
 	</filter-mapping>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:config/spring/context-*.xml</param-value>
+	</context-param>
 
 </web-app>

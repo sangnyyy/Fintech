@@ -117,7 +117,6 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>번호</th>
 					<th>제목</th>
 					<th>작성자</th>
 					<th>날짜</th>
@@ -126,49 +125,42 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>1</td>
 					<td>안녕</td>
 					<td>sml</td>
 					<td>18.02.01</td>
 					<td>1</td>
 				</tr>
 				<tr>
-					<td>2</td>
 					<td>반갑습니다!</td>
 					<td>sdh2012</td>
 					<td>18.02.02</td>
 					<td>5</td>
 				</tr>
 				<tr>
-					<td>3</td>
 					<td>가입 인사 드려욥!</td>
 					<td>ljh_RockandRoll</td>
 					<td>18.02.02</td>
 					<td>3</td>
 				</tr>
 				<tr>
-					<td>4</td>
 					<td>이 사이트 너무 조은듯 ㅎㅎㅎ</td>
 					<td>kimkim2012</td>
 					<td>18.02.02</td>
 					<td>46</td>
 				</tr>
 				<tr>
-					<td>5</td>
 					<td>투자 관련 질문드립니다. 고수님들!</td>
 					<td>sml</td>
 					<td>18.02.03</td>
 					<td>39</td>
 				</tr>
 				<tr>
-					<td>6</td>
 					<td>지금 투자를 하고 싶은데 ..</td>
 					<td>kingkendrick</td>
 					<td>18.02.03</td>
 					<td>67</td>
 				</tr>
 				<tr>
-					<td>7</td>
 					<td>가입 인사 드려요!</td>
 					<td>cr7</td>
 					<td>18.02.03</td>
@@ -178,7 +170,7 @@
 			</tbody>
 		</table>
 		<hr />
-		<a class="btn btn-default">글쓰기</a>
+		<a class="btn btn-default" href="http://localhost:8080/smu/cwrite">글쓰기</a>
 		<div class="text-center">
 			<ul class="pagination">
 				<li><a href="#">1</a></li>
