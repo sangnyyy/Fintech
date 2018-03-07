@@ -47,13 +47,13 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/smu/main">SMU ASSET</a>
+				<a class="navbar-brand" href="/smuasset/main">SMU ASSET</a>
 			</div>
 
 			<c:choose>
 				<c:when test="${sessionScope.name ne null }">
 				<div id="navbar" class="navbar-collapse collapse">
-					<form class="navbar-form navbar-right" style="height:30px;" action="/smu/logout">
+					<form class="navbar-form navbar-right" style="height:30px;" action="/smuasset/logout">
 						<span class="navbar-brand" style="padding-top:7px;">${sessionScope.name }님 환영합니다.</span>
 							<button type="submit" class="btn btn-success">로그아웃</button>
 					</form>					
@@ -61,7 +61,7 @@
 				</c:when>
 				<c:otherwise>
 					<div id="navbar" class="navbar-collapse collapse">
-						<form class="navbar-form navbar-right" action="/smu/login"
+						<form class="navbar-form navbar-right" action="/smuasset/login"
 							method="POST">
 							<div class="form-group">
 								<input type="text" placeholder="Email" class="form-control"
@@ -73,7 +73,7 @@
 							</div>
 							<button type="submit" class="btn btn-success">로그인</button>
 							<input type="button" value="회원가입" class="btn btn-success"
-								onclick="location.href='/smu/signup' ">
+								onclick="location.href='/smuasset/signup' ">
 							</button>
 						</form>
 					</div>
@@ -93,7 +93,7 @@
 			</div>
 			<button type="submit" class="btn btn-success">로그인</button>
 			<input type="button" value="회원가입" class="btn btn-success"
-				onclick="location.href='/smu/signup' ">
+				onclick="location.href='/smuasset/signup' ">
 			</button>
 		</form>
 	</div>
