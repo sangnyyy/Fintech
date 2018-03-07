@@ -1,4 +1,4 @@
-package kr.ac.smu;
+package kr.ac.smuasset;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import kr.ac.smu.member.JdbcRegistDao;
-import kr.ac.smu.member.MemberRegistRequest;
-import kr.ac.smu.member.RegistDao;
+import kr.ac.smuasset.member.JdbcRegistDao;
+import kr.ac.smuasset.member.MemberRegistRequest;
+import kr.ac.smuasset.member.RegistDao;
 
 /**
  * Handles requests for the application home page.
@@ -56,12 +56,12 @@ public class HomeController implements BeanFactoryAware{
 			if(registDao.loginCheck(req.getParameter("email"), req.getParameter("password"))) {
 				List<MemberRegistRequest> list = registDao.select(req.getParameter("email"));
 				session.setAttribute("name", list.get(0).getName());
-				out.println("<script>alert('로그인을 성공하였습니다!'); location.href='/smu/main'</script>");
+				out.println("<script>alert('로그인을 성공하였습니다!'); location.href='/smuasset/main'</script>");
 				out.flush();
 				out.close();
 			}
 			else {
-				out.println("<script>alert('로그인 정보를 확인하세요!'); location.href='/smu/main'</script>");
+				out.println("<script>alert('로그인 정보를 확인하세요!'); location.href='/smuasset/main'</script>");
 				out.flush();
 				out.close();
 			}
@@ -92,7 +92,7 @@ public class HomeController implements BeanFactoryAware{
 		res.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = res.getWriter();
 		session.removeAttribute("name");
-		out.println("<script>alert('로그아웃을 성공하였습니다!'); location.href='/smu/main'</script>");
+		out.println("<script>alert('로그아웃을 성공하였습니다!'); location.href='/smuasset/main'</script>");
 		out.flush();
 		out.close();
 		
@@ -114,7 +114,7 @@ public class HomeController implements BeanFactoryAware{
 			mem.setPassword(req.getParameter("password"));
 			
 			registDao.insert(mem);
-			out.println("<script>alert('회원가입을 성공하였습니다!'); location.href='/smu/main'</script>");
+			out.println("<script>alert('회원가입을 성공하였습니다!'); location.href='/smuasset/main'</script>");
 			out.flush();
 			out.close();
 			

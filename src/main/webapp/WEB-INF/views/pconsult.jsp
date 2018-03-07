@@ -47,14 +47,14 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/smu/main">SMU ASSET</a>
+			<a class="navbar-brand" href="/smuasset/main">SMU ASSET</a>
 		</div>
 
 		<c:choose>
 			<c:when test="${sessionScope.name ne null }">
 				<div id="navbar" class="navbar-collapse collapse">
 					<form class="navbar-form navbar-right" style="height: 30px;"
-						action="/smu/logout">
+						action="/smuasset/logout">
 						<span class="navbar-brand" style="padding-top: 7px;">${sessionScope.name }님
 							환영합니다.</span>
 						<button type="submit" class="btn btn-success">로그아웃</button>
@@ -75,7 +75,7 @@
 						</div>
 						<button type="submit" class="btn btn-success">로그인</button>
 						<input type="button" value="회원가입" class="btn btn-success"
-							onclick="location.href='/smu/signup' ">
+							onclick="location.href='/smuasset/signup' ">
 						</button>
 					</form>
 				</div>
@@ -95,7 +95,7 @@
 			</div>
 			<button type="submit" class="btn btn-success">로그인</button>
 			<input type="button" value="회원가입" class="btn btn-success"
-				onclick="location.href='/smu/signup' ">
+				onclick="location.href='/smuasset/signup' ">
 			</button>
 		</form>
 	</div>
@@ -180,7 +180,7 @@
 			</tbody>
 		</table>
 		<hr />
-		<a class="btn btn-default" href="http://localhost:8080/smu/pwrite">글쓰기</a>
+		<a class="btn btn-default" href="#">글쓰기</a>
 		<div class="text-center">
 			<ul class="pagination">
 				<li><a href="#">1</a></li>

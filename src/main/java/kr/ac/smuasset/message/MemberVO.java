@@ -1,4 +1,4 @@
-package kr.ac.smu.message;
+package kr.ac.smuasset.message;
 
 import java.sql.Date;
 

@@ -1,8 +1,8 @@
-package kr.ac.smu.message;
+package kr.ac.smuasset.message;
 
 import java.util.List;
 
-import kr.ac.smu.member.MemberRegistRequest;
+import kr.ac.smuasset.member.MemberRegistRequest;
 
 public interface messageDao {
 	public int insert();

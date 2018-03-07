@@ -1,4 +1,4 @@
-package kr.ac.smu.member;
+package kr.ac.smuasset.member;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
