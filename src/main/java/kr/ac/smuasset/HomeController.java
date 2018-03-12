@@ -1,4 +1,4 @@
-package kr.ac.smuasset.controller;
+package kr.ac.smuasset;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,9 +24,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import kr.ac.smuasset.dao.JdbcRegistDao;
-import kr.ac.smuasset.dao.MemberRegistRequest;
+import kr.ac.smu.dto.RegistDto;
+
 import kr.ac.smuasset.dao.RegistDao;
+import kr.ac.smuasset.dao.RegistDaoImpl;
 
 /**
  * Handles requests for the application home page.
@@ -39,7 +40,8 @@ public class HomeController implements BeanFactoryAware{
 	@Override
 	public void setBeanFactory(BeanFactory context) throws BeansException {
 		// TODO Auto-generated method stub
-		registDao = context.getBean("jdbcRegistDao", JdbcRegistDao.class);
+		
+		registDao = context.getBean("registDaoImpl", RegistDaoImpl.class);
 	}
 	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
@@ -54,7 +56,7 @@ public class HomeController implements BeanFactoryAware{
 			req.setCharacterEncoding("UTF-8");	//POST방식 encoding 해결
 			PrintWriter out = res.getWriter();
 			if(registDao.loginCheck(req.getParameter("email"), req.getParameter("password"))) {
-				List<MemberRegistRequest> list = registDao.select(req.getParameter("email"));
+				List<RegistDto> list = registDao.select(req.getParameter("email"));
 				session.setAttribute("name", list.get(0).getName());
 				out.println("<script>alert('로그인을 성공하였습니다!'); location.href='/smuasset/main'</script>");
 				out.flush();
@@ -104,16 +106,17 @@ public class HomeController implements BeanFactoryAware{
 	}
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public void signUpFinish(HttpServletRequest req, HttpServletResponse res) throws IOException{
-		MemberRegistRequest mem = new MemberRegistRequest();
+		RegistDto mem = new RegistDto();
+		RegistDto registDto = new RegistDto();
 		try {
 			req.setCharacterEncoding("UTF-8");	//POST방식 encoding 해결
 			res.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = res.getWriter();
-			mem.setName(req.getParameter("name"));
-			mem.setEmail(req.getParameter("email"));
-			mem.setPassword(req.getParameter("password"));
+			registDto.setName(req.getParameter("name"));
+			registDto.setEmail(req.getParameter("email"));
+			registDto.setPassword(req.getParameter("password"));
 			
-			registDao.insert(mem);
+			registDao.insert(registDto);
 			out.println("<script>alert('회원가입을 성공하였습니다!'); location.href='/smuasset/main'</script>");
 			out.flush();
 			out.close();

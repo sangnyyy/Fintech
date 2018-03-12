@@ -5,15 +5,17 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-public class RegistRowMapper implements RowMapper<MemberRegistRequest> {
+import kr.ac.smu.dto.RegistDto;
+
+public class RegistRowMapper implements RowMapper<RegistDto> {
 
 	@Override
-	public MemberRegistRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
-		MemberRegistRequest mem = new MemberRegistRequest();
-		mem.setPassword(rs.getString("password"));
-		mem.setEmail(rs.getString("email"));
-		mem.setName(rs.getString("name"));
-		return mem;
+	public RegistDto mapRow(ResultSet rs, int rowNum) throws SQLException {
+		RegistDto registDto = new RegistDto();
+		registDto.setPassword(rs.getString("password"));
+		registDto.setEmail(rs.getString("email"));
+		registDto.setName(rs.getString("name"));
+		return registDto;
 	}
 
 }

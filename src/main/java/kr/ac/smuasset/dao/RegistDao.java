@@ -2,10 +2,12 @@ package kr.ac.smuasset.dao;
 
 import java.util.List;
 
+import kr.ac.smu.dto.RegistDto;
+
 public interface RegistDao {
-	public int insert(MemberRegistRequest memRegReq);
+	public int insert(RegistDto registDto);
 	public int count();
-	public List<MemberRegistRequest> select(String email);
+	public List<RegistDto> select(String email);
 	public boolean loginCheck(String email, String password);
 
 }

@@ -31,15 +31,14 @@
 		<beans:property name="user" value="root" />
 		<beans:property name="password" value="password" />
 	</beans:bean>
-	
-	
-	<beans:bean id="jdbcRegistDao" class="kr.ac.smuasset.dao.JdbcRegistDao">
+
+	<beans:bean id="registDaoImpl" class="kr.ac.smuasset.dao.RegistDaoImpl">
 		<beans:constructor-arg ref="dataSource">
 		</beans:constructor-arg>
 	</beans:bean>
-
 	
-	<context:component-scan base-package="kr.ac.smuasset.controller" />
+	
+	<context:component-scan base-package="kr.ac.smuasset" />
 	
 
 

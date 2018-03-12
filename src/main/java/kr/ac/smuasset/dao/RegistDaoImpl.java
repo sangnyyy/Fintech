@@ -14,18 +14,18 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
+import kr.ac.smu.dto.RegistDto;
 
-public class JdbcRegistDao implements RegistDao {
-	private JdbcTemplate jdbc;
-//	private RowMapper<MemberRegistRequest> registRowMapper;
+public class RegistDaoImpl implements RegistDao{
 	
-	public JdbcRegistDao(DataSource dataSource) {
-		// TODO Auto-generated constructor stub
+	private JdbcTemplate jdbc;
+	public RegistDaoImpl(DataSource dataSource) {
 		jdbc = new JdbcTemplate(dataSource);
 	}
 	
+	
 	@Override
-	public int insert(final MemberRegistRequest memRegReq) {
+	public int insert(final RegistDto registDto) {
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		
 		PreparedStatementCreator psc = new PreparedStatementCreator() {
@@ -34,9 +34,9 @@ public class JdbcRegistDao implements RegistDao {
 			public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
 				PreparedStatement statement = conn.prepareStatement(
 									"insert into members(name, email, password) values(?,?,?)", new String[] {"id"});
-				statement.setString(1, memRegReq.getName());
-				statement.setString(2, memRegReq.getEmail());
-				statement.setString(3, memRegReq.getPassword());
+				statement.setString(1, registDto.getName());
+				statement.setString(2, registDto.getEmail());
+				statement.setString(3, registDto.getPassword());
 				
 				return statement;
 			}
@@ -53,18 +53,18 @@ public class JdbcRegistDao implements RegistDao {
 	}
 
 	@Override
-	public List<MemberRegistRequest> select(String email) {
-		List<MemberRegistRequest> result = jdbc.query(
+	public List<RegistDto> select(String email) {
+		List<RegistDto> result = jdbc.query(
 				"select * from members where email=?",
 				new Object[] {email},
-				new RowMapper<MemberRegistRequest>() {
+				new RowMapper<RegistDto>() {
 					@Override
-					public MemberRegistRequest mapRow(ResultSet rs, int rowNum) throws SQLException {
-						MemberRegistRequest mem = new MemberRegistRequest();
-						mem.setName(rs.getString("name"));
-						mem.setEmail(rs.getString("email"));
-						mem.setPassword(rs.getString("password"));
-						return mem;
+					public RegistDto mapRow(ResultSet rs, int rowNum) throws SQLException {
+						RegistDto registDto = new RegistDto();
+						registDto.setName(rs.getString("name"));
+						registDto.setEmail(rs.getString("email"));
+						registDto.setPassword(rs.getString("password"));
+						return registDto;
 					}
 					
 				}			
@@ -77,7 +77,7 @@ public class JdbcRegistDao implements RegistDao {
 		
 		int result = 0;
 		result = jdbc.queryForInt(
-				"select count(email) from members where email=? and password=?",
+				"select count(*) from members where email=? and password=?",
 				new Object[] {email, password}			
 				);
 		if(result > 0) { 
