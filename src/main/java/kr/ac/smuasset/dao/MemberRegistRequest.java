@@ -1,4 +1,4 @@
-package kr.ac.smuasset.member;
+package kr.ac.smuasset.dao;
 
 public class MemberRegistRequest {
 	String email;
