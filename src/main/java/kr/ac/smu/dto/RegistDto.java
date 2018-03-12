@@ -1,6 +1,6 @@
-package kr.ac.smuasset.dao;
+package kr.ac.smu.dto;
 
-public class MemberRegistRequest {
+public class RegistDto {
 	String email;
 	String name;
 	String password;
