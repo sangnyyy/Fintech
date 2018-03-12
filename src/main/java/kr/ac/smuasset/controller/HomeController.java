@@ -1,4 +1,4 @@
-package kr.ac.smuasset;
+package kr.ac.smuasset.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import kr.ac.smuasset.member.JdbcRegistDao;
-import kr.ac.smuasset.member.MemberRegistRequest;
-import kr.ac.smuasset.member.RegistDao;
+import kr.ac.smuasset.dao.JdbcRegistDao;
+import kr.ac.smuasset.dao.MemberRegistRequest;
+import kr.ac.smuasset.dao.RegistDao;
 
 /**
  * Handles requests for the application home page.

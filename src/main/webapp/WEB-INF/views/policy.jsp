@@ -119,7 +119,7 @@
           <h2>지역별 행정 정보</h2>
           <p>지역별 행정 정보에 대하여 자세히 알아보세요.
           </p><br/>
-          <img src="http://www.isisa.net/news/photo/201305/24215_20928_4715.jpg" style="width:360px; height:180px;">
+          <img src="resources/images/admini.jpg" style="width:360px; height:180px;">
           <br/>
           <p><a class="btn btn-default" href="http://www.mois.go.kr/frt/a01/frtMain.do" role="button">자세히 보기 &raquo;</a></p>
         </div>
@@ -127,7 +127,7 @@
           <h2>지역별 부동산 가격
           </h2>
 		  <p>지역별 부동 가격에 대하여 자세히 알아보세요.</p><br/>
-		  <img src="http://www.joseilbo.com/gisa_img_origin/160328050353_soosup_origin.jpg"
+		  <img src="resources/images/land.jpg"
            style="width:360px; height:180px;">
           <br/>
           <p><a class="btn btn-default" href="http://land.naver.com/" role="button">자세히 보기 &raquo;</a></p>
@@ -137,7 +137,7 @@
           </h2>
           <p>기타 금융 관련 소식에 대하여 자세히 알아보세요.</p><br/>
           
-		  <img src="http://img.etnews.com/photonews/1604/797015_20160428152038_293_0001.jpg"
+		  <img src="resources/images/finance.jpg"
            style="width:360px; height:180px;">
 
           <p><a class="btn btn-default" href="http://finance.naver.com/" role="button">자세히 보기 &raquo;</a></p>

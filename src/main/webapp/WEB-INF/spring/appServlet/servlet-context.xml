@@ -33,13 +33,13 @@
 	</beans:bean>
 	
 	
-	<beans:bean id="jdbcRegistDao" class="kr.ac.smuasset.member.JdbcRegistDao">
+	<beans:bean id="jdbcRegistDao" class="kr.ac.smuasset.dao.JdbcRegistDao">
 		<beans:constructor-arg ref="dataSource">
 		</beans:constructor-arg>
 	</beans:bean>
 
 	
-	<context:component-scan base-package="kr.ac.smuasset" />
+	<context:component-scan base-package="kr.ac.smuasset.controller" />
 	
 
 
