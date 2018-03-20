@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
-import kr.ac.smu.dto.RegistDto;
+import kr.ac.smuasset.dto.RegistDto;
 
 public class RegistDaoImpl implements RegistDao{
 	
