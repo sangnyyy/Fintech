@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import kr.ac.smu.dto.RegistDto;
+import kr.ac.smuasset.dto.RegistDto;
 
 public class RegistRowMapper implements RowMapper<RegistDto> {
 

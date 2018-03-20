@@ -1,4 +1,4 @@
-package kr.ac.smu.dto;
+package kr.ac.smuasset.dto;
 
 public class RegistDto {
 	String email;

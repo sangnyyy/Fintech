@@ -24,10 +24,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import kr.ac.smu.dto.RegistDto;
-
 import kr.ac.smuasset.dao.RegistDao;
 import kr.ac.smuasset.dao.RegistDaoImpl;
+import kr.ac.smuasset.dto.RegistDto;
 
 /**
  * Handles requests for the application home page.
@@ -81,6 +80,8 @@ public class HomeController implements BeanFactoryAware{
 	public String communityWriteFinish() {
 		return "index";
 	}
+	
+	
 	@RequestMapping(value="pwrite", method = RequestMethod.GET)
 	public String pConsultWrite() {
 		return "pwrite";
@@ -89,6 +90,8 @@ public class HomeController implements BeanFactoryAware{
 	public String pConsultWriteFinish() {
 		return "index";
 	}
+	
+	
 	@RequestMapping(value="/logout")
 	public void logOut(HttpServletResponse res, HttpSession session) throws IOException {
 		res.setContentType("text/html; charset=UTF-8");
@@ -97,8 +100,8 @@ public class HomeController implements BeanFactoryAware{
 		out.println("<script>alert('로그아웃을 성공하였습니다!'); location.href='/smuasset/main'</script>");
 		out.flush();
 		out.close();
-		
 	}
+	
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signUp() {
@@ -106,7 +109,6 @@ public class HomeController implements BeanFactoryAware{
 	}
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public void signUpFinish(HttpServletRequest req, HttpServletResponse res) throws IOException{
-		RegistDto mem = new RegistDto();
 		RegistDto registDto = new RegistDto();
 		try {
 			req.setCharacterEncoding("UTF-8");	//POST방식 encoding 해결
@@ -125,7 +127,6 @@ public class HomeController implements BeanFactoryAware{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 
 	@RequestMapping(value = "/gconsult", method = RequestMethod.GET)
